@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tsalagi — Support</title>
+  <meta name="description" content="Support page for the Tsalagi language learning app." />
+  <style>
+    :root {
+      --bg: #ffffff;
+      --fg: #111111;
+      --muted: #6b7280;
+      --card: #f5f7fb;
+      --accent: #2563eb;
+      --accent-fg: #ffffff;
+      --border: #e5e7eb;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #0b0c10;
+        --fg: #f3f4f6;
+        --muted: #9ca3af;
+        --card: #111318;
+        --accent: #3b82f6;
+        --accent-fg: #0b0c10;
+        --border: #1f2937;
+      }
+    }
+    html, body { margin:0; padding:0; background:var(--bg); color:var(--fg); font:16px/1.5 system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, Apple Color Emoji, Segoe UI Emoji; }
+    .container { max-width: 760px; margin: 0 auto; padding: 24px; }
+    header { padding: 20px 0 8px; }
+    h1 { font-size: clamp(24px, 4vw, 36px); margin: 0 0 6px; }
+    .subtitle { color: var(--muted); margin: 0 0 24px; }
+    .card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; margin: 14px 0; }
+    h2 { font-size: 18px; margin: 0 0 8px; }
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .btn {
+      display: inline-block; background: var(--accent); color: var(--accent-fg);
+      padding: 10px 14px; border-radius: 10px; text-decoration: none; font-weight: 600;
+    }
+    .grid { display: grid; gap: 12px; }
+    @media (min-width: 640px) { .grid.two { grid-template-columns: 1fr 1fr; } }
+    footer { margin: 28px 0 8px; color: var(--muted); font-size: 14px; }
+    ul { margin: 8px 0 0 20px; }
+    .small { font-size: 14px; color: var(--muted); }
+    .kbd { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; background: var(--border); border-radius: 6px; padding: 1px 6px; }
+  </style>
+</head>
+<body>
+  <div class="container" role="main">
+    <header>
+      <h1>ᏣᎳᎩ (Tsalagi) — Support</h1>
+      <p class="subtitle">Thanks for using the Tsalagi language learning app. We’re here to help.</p>
+    </header>
+
+    <section class="grid two">
+      <div class="card" aria-labelledby="contact">
+        <h2 id="contact">Contact</h2>
+        <p>Fastest ways to reach us:</p>
+        <p>
+          • Email: <a href="mailto:<SUPPORT_EMAIL>?subject=Tsalagi%20Support%20Request">\<SUPPORT_EMAIL></a><br/>
+          • Report a bug on GitHub: <a href="https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_GITHUB_USERNAME>.github.io/issues">Open an issue</a>
+        </p>
+        <p class="small">Include your device model, iOS version, and app version (Settings → Tsalagi → About).</p>
+      </div>
+
+      <div class="card" aria-labelledby="quicklinks">
+        <h2 id="quicklinks">Quick links</h2>
+        <p>
+          <a class="btn" href="https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_GITHUB_USERNAME>.github.io/issues/new?title=%5BTsalagi%5D%20Support%20Request&body=**Device**:%0A**iOS**:%0A**App%20Version**:%0A**Issue**:%0A">Submit a request</a>
+        </p>
+        <p><a href="./privacy.html">Privacy Policy</a></p>
+      </div>
+    </section>
+
+    <section class="card" aria-labelledby="troubleshoot">
+      <h2 id="troubleshoot">Quick troubleshooting</h2>
+      <ul>
+        <li>Restart the app (swipe up from the app switcher) and try again.</li>
+        <li>Ensure you have the Cherokee keyboard enabled (Settings → General → Keyboard → Keyboards → Add New Keyboard… → Cherokee).</li>
+        <li>Sound issues? Check your device volume and silent switch; try headphones.</li>
+        <li>Reinstall the app if problems persist (this may reset local progress).</li>
+      </ul>
+    </section>
+
+    <section class="card" aria-labelledby="faq">
+      <h2 id="faq">FAQ</h2>
+      <p><strong>How do I report a bug?</strong><br/>
+         Use the <a href="https://github.com/<YOUR_GITHUB_USERNAME>/<YOUR_GITHUB_USERNAME>.github.io/issues">GitHub Issues</a> link or email us. Please include steps to reproduce.</p>
+      <p><strong>Do you store personal data?</strong><br/>
+         See our <a href="./privacy.html">Privacy Policy</a>. The app primarily stores progress locally on your device.</p>
+    </section>
+
+    <footer>
+      <div>Version: <span class="kbd">1.0</span> • Last updated: <span class="kbd">2025-01-01</span></div>
+      <div class="small">© <span id="year"></span> <YOUR_NAME_OR_ORG>. All rights reserved.</div>
+    </footer>
+  </div>
+  <script>
+    // Update footer year automatically
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
